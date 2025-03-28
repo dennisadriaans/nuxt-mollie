@@ -30,6 +30,16 @@ yarn add mollie-module
 pnpm add mollie-module
 ```
 
+## ⚠️  Warning Implement proper security
+
+This module exposes several API routes that are not protected by default. You should implement your own authentication and authorization mechanisms to secure these routes in a production environment. Anyone with access to these routes could potentially:
+
+- Access customer information
+- Create, modify, or delete customer mandates
+- Manage subscriptions
+
+Implement proper security measures before deploying to production.
+
 ## Configuration
 
 Add the module to your `nuxt.config.ts` and configure it:
