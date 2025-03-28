@@ -243,6 +243,7 @@ const loadCustomers = async () => {
     }
   }
   catch (error) {
+    console.log(error)
     showStatus('Failed to load customers', false)
   }
 }
@@ -260,6 +261,7 @@ const createCustomer = async () => {
     }
   }
   catch (error) {
+    console.log(error)
     showStatus('Error creating customer', false)
   }
 }
@@ -280,6 +282,7 @@ const deleteCustomer = async (id) => {
     }
   }
   catch (error) {
+    console.log(error)
     showStatus('Error deleting customer', false)
   }
 }
@@ -301,6 +304,7 @@ const loadSubscriptions = async (customerId) => {
     }
   }
   catch (error) {
+    console.log(error)
     subscriptions.value = []
     showStatus('Failed to load subscriptions', false)
   }
@@ -323,6 +327,7 @@ const createSubscription = async () => {
     }
   }
   catch (error) {
+    console.log(error)
     showStatus('Error creating subscription', false)
   }
 }
@@ -344,6 +349,7 @@ const cancelSubscription = async (id) => {
     }
   }
   catch (error) {
+    console.log(error)
     showStatus('Error cancelling subscription', false)
   }
 }

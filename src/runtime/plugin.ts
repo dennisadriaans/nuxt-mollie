@@ -1,7 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((nuxtApp) => {
-
   // Composable to interact with Mollie APIs
   const useMollie = () => {
     // Customers API
@@ -113,7 +112,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     return {
       customers,
       mandates,
-      subscriptions
+      subscriptions,
     }
   }
 
