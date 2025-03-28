@@ -7,8 +7,6 @@
 
 Nuxt module for integrating with the Mollie payment provider.
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-
 ## Features
 
 - 🔑 &nbsp;Secure API integration with Mollie
@@ -129,6 +127,27 @@ export default defineEventHandler(async (event) => {
   }
 })
 ```
+
+#### Available Server Routes
+
+The module exposes the following server routes:
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/mollie/customers` | `GET` | List all customers |
+| `/api/mollie/customers` | `POST` | Create a customer |
+| `/api/mollie/customers/:id` | `GET` | Get a customer by ID |
+| `/api/mollie/customers/:id` | `PATCH` | Update a customer |
+| `/api/mollie/customers/:id` | `DELETE` | Delete a customer |
+| `/api/mollie/customers/:customerId/mandates` | `GET` | List customer's mandates |
+| `/api/mollie/customers/:customerId/mandates` | `POST` | Create a mandate |
+| `/api/mollie/customers/:customerId/mandates/:id` | `GET` | Get customer's mandate by ID |
+| `/api/mollie/customers/:customerId/mandates/:id` | `DELETE` | Revoke a mandate |
+| `/api/mollie/customers/:customerId/subscriptions` | `GET` | List customer's subscriptions |
+| `/api/mollie/customers/:customerId/subscriptions` | `POST` | Create a subscription |
+| `/api/mollie/customers/:customerId/subscriptions/:id` | `GET` | Get customer's subscription by ID |
+| `/api/mollie/customers/:customerId/subscriptions/:id` | `PATCH` | Update a subscription |
+| `/api/mollie/customers/:customerId/subscriptions/:id` | `DELETE` | Cancel a subscription |
 
 ## Available APIs
 
